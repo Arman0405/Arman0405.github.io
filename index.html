@@ -1,84 +1,174 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title></title>
 	<meta charset="utf-8">
-	<title>Безопасная косметика</title>
-</head>
-<body>
 	<style type="text/css">
+		html {
+			scroll-behavior: smooth;
+		}
 		body {
-			background-color: lightblue;
+			width: 100%;
+			overflow-x: hidden;
+			margin-left: -5px;
+			background-color: rgb(201,175,219);
+		}
+		main { 
+			margin: 0 10%;
+			padding-top: 70px;
+			background-color: white;
+			border-right: 1px solid grey;
+			border-left: 1px solid grey;
+			padding: 10px 5px 10px 0;
 		}
 		header {
-			text-align: center;
-			font-size: 50px;
-			padding-right: 20px;
+			border-bottom: 1px solid grey;
+			font-size: 27px;
+			padding: 10px;
+			width: 100.5%;
+			background-color: rgb(201,175,219);
+			display: flex;
+		}
+		header button div {
+			display: none;
+		}
+		header button {
+			background-color: transparent;
+			background: transparent;
+			border: medium none;
+		}
+		header section {
+			margin-left: 42%;
+			margin-top: 0;
+		}
+		.op {
+			display: none;
+			font-size: 30px;
+			top: 70px;
+			left: 0;
+			background-color: rgb(201,175,219);
+			border: 1px solid black;
+		}
+		.q1 {
+			padding: 10px;
+		}
+		.q1:hover .op{
+			display: block;
+		    position:absolute;
+		    width:auto;
+		}
+		.op:hover .op {
+			display: block;
+		}
+		.op nav {
+			text-align: left;
+			padding: 0 10px;
+		}
+		.op a:hover {
+			background-color: grey;
+		}
+		.op a {
+			padding: 0 20px;
+		}
+		.bok {
+			margin-top: 50px;
+			margin-right: 3px;
+			font-size: 20px;
+			width: 20%;
+			border: 1px solid grey;
+			border-radius: 7%;
+			padding: 20px 10px;
+			position: fixed;
+			background-color: white;
+			right: 0;
+			bottom: 0;
+		}
+		.bok a {
+			color: black;
+			font-family: Fixed, monospace;
 		}
 		main {
-			background-color: white;
-			margin-left: 0;
-			margin-right: 0;
-			padding-bottom: 30px;
-			width: 100%;
+			border-right: 1px solid grey;
 		}
-		.hed {
-			font-size: 35px;
-			font-family: Arial, Helvetica, sans-serif;
+		main div h1 {
+			font-family: Gill Sans, sans-serif;
+		}
+		main div {
+			padding: 10px 2% 10px 20px;
 		}
 		.tx {
-			width: 90%;
-			padding-left: 30px;
-			font-family: "Trebuchet MS", Helvetica, sans-serif;
-			font-size: 20px;
+			font-size: 23px;
+			font-family:Zapf Chancery, cursive;
 		}
 		#ere {
-			padding-top: 30px;
-		}
-		.num3 ul {
-			display: flex;
-			list-style: none;
-			width: 560px;     
-			height: 500px;   
-			overflow-x: scroll;
-			overflow-y: hidden;
-		}
-		#epe {
-			background-color: lightblue;
-			width: 98%;
+			border: 1px solid black;
 		}
 		footer {
-			background-color: chocolate;
+			background-color: rgb(201,175,219);
+			min-height: 5vh;
+			border-top: 1px solid grey;
 		}
-		.konets {
-			text-align: left;
-			color: lightgrey;
+		.u3 {
+			padding: 10px 2% 45% 20px;
 		}
-		#svyaz {
-			font-size: 95%; 
-			font-family: Arial, Helvetica, sans-serif;
+		.u3 img {
+			padding-right: 20px;
+			font-size: 20px;
+			transition: 1.5s;
 		}
-		#svyaz img {
-			height: 2.5%;
-			width: 2.5%;
+		.u3 img:hover {
+			transform: scale(1.3,1.3);
+		}
+		#str {
+			left: 0;
+			bottom: 0;
+			position: fixed;
 		}
 	</style>
+</head>
+<body topmargin="0">
+	<a id="top"></a>
 	<header>
-		Безопасная косметика от
-		<img src="https://i.ibb.co/L1gYJbf/1.png" height="80px" align="center">
+		<button class="q1"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png" height="50px" width="50px" align="left">
+			<div class="op">
+				<a href="./Glavnaia.html">Главная</a>
+				<a href="">Связь</a>
+			</div>
+		</button>
+		<section><img src="https://biosea.fr/images/Biosea_france_white.svg" align="center"></section>
 	</header>
+	<a href="#top"><img src="https://i.ibb.co/4mKB5kZ/strealka.png" height="65px" width="65px" align="left" id="str"></a>
 	<main>
-		<div class="num1">
-			<strong class="hed">История о компании</strong>
+		<div class="lst">
+			<h1>Меню</h1>
+			<section class="tx">
+				<li><a href="#top3" title="Нажмите чтобы перейти">Обо мне</a></li>
+				<li><a href="#top1" title="Нажмите чтобы перейти">История компании</a></li>
+				<li><a href="#top2" title="Нажмите чтобы перейти">Миссия компании</a></li>
+			</section>
+		</div>
+		<hr>
+		<div class="u3">
+			<a id="top3"></a>
+			<h1>Обо мне</h1>
+			<p align="left" class="tx"><img src="Ainur.jpg" height="60%" width="40%" align="left">
+			 Здравствуйте! Я мама четырех детей. Я родилась в 1983 году 16 марта в г. Петропавловск. Сейчас живу в г. Шымкент. С прошлого года начала работать в компании BIOSEA, где вы можете пролистать и найти информацию внизу.			
+			</p>
+		</div>
+		<hr>
+		<div class="u1">
+			<a id="top1"></a>
+			<h1>История о компании</h1>
 			<div class="tx">
-				<p><img src="https://biosea.fr/images/biosea/preserver-environment.jpg" id="bas" align="right" height="180px" width="180px" border="3px black green;">История Компании BIOSEA началась с рождения Лаборатории BIOSEA в Бретани, живописном районе Франции, на побережье Кот-д'Армор, богатом разновидностями водорослей и морских растений, обладающих удивительными и разнообразными косметическими свойствами.</p>
+				<p><img src="https://biosea.fr/images/biosea/preserver-environment.jpg" id="bas" height="150px" width="150px" border="3px black green;" align="right">История Компании BIOSEA началась с рождения Лаборатории BIOSEA в Бретани, живописном районе Франции, на побережье Кот-д'Армор, богатом разновидностями водорослей и морских растений, обладающих удивительными и разнообразными косметическими свойствами.</p>
 			<p>Лаборатория BIOSEA была основана доктором фармацевтических наук Селин Лангле в 2003 году после трех лет исследований и разработок. 10 лет своей жизни Селин Лангле посвятила фармацевтике, получая вдохновение от природных свойств трав, и испытывая восторг от искусства создания и использования ароматерапии и косметики.</p>
 			<br>
 			</div>
 		</div>
 		<hr>
-		<br>
-		<div class="num2">
-			<strong class="hed">Миссия компании</strong>
+		<a id="top2"></a>
+		<div class="u2">
+			<h1>Миссия компании</h1>
 			<div class="tx">
 				<img src="https://sun9-32.userapi.com/c855232/v855232727/1a2d1/xrNZlMYWo0w.jpg" id="ere" height="40%" width="90%" align="center">
 				<p>Миссия компании BIOSEA получила отображение в слогане «le charme au naturel»: «Сохраним и подчеркнем натуральный шарм, заложенный в человеке природой».</p>
@@ -86,31 +176,12 @@
 				<p>Благодаря откликам клиентов, Селин Лангле чётко осознала требования современных женщин к эффективности и, особенно, к безопасности продукции для себя, своих детей и близких.</p>
 			</div>
 		</div>
+		<br>
 		<hr>
 		<br>
-		<div class="num3">
-			<strong class="hed">Продукций</strong>
-			<div class="tx" align="center" id="epe">
-				<ul>
-					<li><img src="https://биоси.бел/wp-content/uploads/2018/02/2624.jpg" height="500px" width="560px">Шампуни</li>
-					<li><img src="https://static.wixstatic.com/media/05265e_a92aa00e518e468d9941d9003341d642.jpg" 	height="500px" width="560px">Косметика</li>
-					<li></li>
-				</ul>
-			</div>
-		</div>
 	</main>
 	<footer>
-		<br>
-		<div id="svyaz" align="center">
-			Чтобы связаться со мной:
-			<br>
-			<a href="https://wa.me/77021342016" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/WhatsApp_logo-color-vertical.svg/1200px-WhatsApp_logo-color-vertical.svg.png"></a>
-			<a href="https://www.instagram.com/ainur_abdullova/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/480px-Instagram_logo_2016.svg.png"></a>
-			<a href="https://t.me/Aiya1603" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/1200px-Telegram_2019_Logo.svg.png"></a>
-			<a href="https://vk.com/id320716083" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/VK.com-logo.svg/1200px-VK.com-logo.svg.png" height="25px"></a>
-		</div>
-		<div class="konets">Страницу создал dybalap369@gmail.com
-		</div>
+		
 	</footer>
 </body>
 </html>
