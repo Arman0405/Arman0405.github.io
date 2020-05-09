@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Главная</title>
+	<meta charset="utf-8">
+	<link rel="shotcut icon" href="https://biosea.fr/images/biosea/biosea.png">
+	<style type="text/css">
+		html {
+			scroll-behavior: smooth;
+		}
+		body {
+			width: 100%;
+			overflow-x: hidden;
+			margin-left: -5px;
+			background-image: url(https://artforlife.ru/wp-content/uploads/2018/12/pre-tendentsiya-gradientnogo-dizajna-kak-ona-vyglyadit-i-kak-ee-ispolzovat-930x465.jpg);
+			background-size: 100% 100%;
+		}
+		main { 
+			margin: 0 10%;
+			padding-top: 70px;
+			background-color: white;
+			border-right: 1px solid grey;
+			border-left: 1px solid grey;
+			padding: 10px 5px 10px 0;
+		}
+		header {
+			border-bottom: 1px solid grey;
+			font-size: 27px;
+			padding: 0 5px;
+			width: 100.5%;
+			background-color: rgb(201,175,219);
+			display: flex;
+		}
+		header button div {
+			display: none;
+		}
+		header button {
+			background-color: transparent;
+			background: transparent;
+			border: medium none;
+		}
+		header section {
+			margin-left: 40%;
+			margin-top: 10px;
+		}
+		.op {
+			display: none;
+			font-size: 30px;
+			top: 70px;
+			left: 0;
+			background-color: rgb(201,175,219);
+			border: 1px solid black;
+			padding: 10px;
+		}
+		.q1 {
+			padding: 10px;
+		}
+		.q1:hover .op{
+			display: block;
+		    position:absolute;
+		    width:auto;
+		}
+		.op:hover .op {
+			display: block;
+		}
+		.op nav {
+			text-align: left;
+		}
+		.op a:hover {
+			text-decoration: underline;
+		}
+		.op a {
+			padding: 0 20px;
+			text-decoration: none;
+		}
+		.bok {
+			margin-top: 50px;
+			margin-right: 3px;
+			font-size: 20px;
+			width: 20%;
+			border: 1px solid grey;
+			border-radius: 7%;
+			padding: 20px 10px;
+			position: fixed;
+			background-color: white;
+			right: 0;
+			bottom: 0;
+		}
+		.bok a {
+			color: black;
+			font-family: Fixed, monospace;
+		}
+		main {
+			border-right: 1px solid grey;
+		}
+		main div h1 {
+			font-family: Gill Sans, sans-serif;
+		}
+		main div {
+			padding: 10px 2% 10px 20px;
+		}
+		.tx {
+			font-size: 23px;
+			font-family:Zapf Chancery, cursive;
+		}
+		#ere {
+			border: 1px solid black;
+		}
+		footer {
+			min-height: 5vh;
+		}
+		.u1 {
+			padding: 10px 2% 150px 20px;
+		}
+		.u1 img {
+			padding-right: 20px;
+			font-size: 20px;
+			transition: 1.5s;
+		}
+		.u1 img:hover {
+			transform: scale(1.3,1.3);
+		}
+		.u4 {
+			padding-bottom: 150px;
+		}
+		#str {
+			left: 0;
+			bottom: 0;
+			position: fixed;
+		}
+		footer {
+			background-color: rgb(201,175,219);
+			min-height: 5vh;
+			border-top: 1px solid grey;
+			width: 105%;
+		}
+		.container {
+			margin: 0 auto;
+			margin-top: 20px;
+			position: relative;
+			width: 40%;
+			padding-bottom: 40%;
+			background: #4c4c4c;
+			border: solid 10px #2c2c2c;
+		}
+		.slide_img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+		}
+		.slide_img img {
+			width: 100%;
+			height: 100%;
+			margin: -15px 0 0 -40px;
+		}
+		#i1, #i2, #i3, #i4, #i5, #i6 {
+			display: none;
+		}
+		.prev, .next {
+			width: 12%;
+			height: 100%;
+			position: absolute;
+			top: -15px;
+			background: rgba(88,88,88,.4);
+			z-index: 99;
+			cursor: pointer;
+		}
+		.prev {
+			left: -40px;
+		}
+		.next {
+			right: 40px;
+		}
+		#nav_slide {
+			width: 100%;
+			height: 11px;
+			bottom: 12%;
+			position: absolute;
+			text-align: center;
+			z-index: 99;
+		}
+		.slide_img nav {
+			text-align: center;
+			font-size: 25px;
+			margin-left: -70px;
+			padding-top: 20px; 
+		}
+		.dots {
+			width: 18px;
+			height: 18px;
+			margin: 0 10px;
+			position: relative;
+			border-radius: 50%;
+			display: inline-block;
+			left: -40px;
+			bottom: -150px;
+			background: rgba(0, 0, 0, 1);
+		}
+		.slide_img {
+			z-index: -1;
+		}
+		#i1:checked ~ #one,
+		#i2:checked ~ #two,
+		#i3:checked ~ #three,
+		#i4:checked ~ #four,
+		#i5:checked ~ #five,
+		#i6:checked ~ #six {
+			z-index: 9;
+		}
+		#i1:checked ~ #nav_slide #dot1,
+		#i2:checked ~ #nav_slide #dot2,
+		#i3:checked ~ #nav_slide #dot3,
+		#i4:checked ~ #nav_slide #dot4 ,
+		#i5:checked ~ #nav_slide #dot5 ,
+		#i6:checked ~ #nav_slide #dot6  {
+			background: blue;
+			height: 25px;
+			width: 25px;
+		}
+	</style>
+</head>
+<body topmargin="0">
+	<a id="top"></a>
+	<header>
+		<button class="q1"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png" height="50px" width="50px" align="left">
+			<div class="op">
+				<a href="./Glavnaia.html">Главная</a>
+				<a href="./Sviaz.html">Связь</a>
+			</div>
+		</button>
+		<section><img src="https://biosea.fr/images/Biosea_france_white.svg" align="center"></section>
+	</header>
+	<a href="#top"><img src="https://i.ibb.co/4mKB5kZ/strealka.png" height="65px" width="65px" align="left" id="str"></a>
+	<main>
+		<div class="lst">
+			<h1>Меню</h1>
+			<section class="tx">
+				<li><a href="#top1" title="Нажмите чтобы перейти">Обо мне</a></li>
+				<li><a href="#top2" title="Нажмите чтобы перейти">История компании</a></li>
+				<li><a href="#top3" title="Нажмите чтобы перейти">Миссия компании</a></li>
+				<li><a href="#top4" title="Нажмите чтобы перейти">Продукция нашей компании</a></li>
+			</section>
+		</div>
+		<hr>
+		<div class="u1">
+			<a id="top1"></a>
+			<h1>Обо мне</h1>
+			<p align="left" class="tx">
+				<img src="./Ainur.jpg" height="60%" width="40%" align="left">
+			 	Здравствуйте меня зовут Айнур Бекижанова и я <a href="">#четыреждымама</a>.		
+			</p>
+			<p align="left" class="tx"> 
+				В данный момент я интернет - предприниматель. Очень удобно совмещать и дом, и работу.</p>
+			<p align="left" class="tx"> 
+				Я успешно прошла курсы копирайтинга, курсы SMM специалиста.
+			</p>
+			<p align="left" class="tx">
+				Я запускаю свою школу для новичков "Запуск Лидера!". Это поэтапное, пошаговое обучение. От упаковки инстаграма до подачи рекламы в соц. сетях: <b>"Facebook", "Vkontakte"</b>.
+			</p>
+			<p align="left" class="tx">
+				Мой девиз: Кто не обучается, тот стоит на месте.
+			</p>
+		</div>
+		<hr>
+		<div class="u2">
+			<a id="top2"></a>
+			<h1>История о компании</h1>
+			<div class="tx">
+				<p><img src="https://biosea.fr/images/biosea/preserver-environment.jpg" id="bas" height="150px" width="150px" border="3px black green;" align="right">История Компании BIOSEA началась с рождения Лаборатории BIOSEA в Бретани, живописном районе Франции, на побережье Кот-д'Армор, богатом разновидностями водорослей и морских растений, обладающих удивительными и разнообразными косметическими свойствами.</p>
+			<p>Лаборатория BIOSEA была основана доктором фармацевтических наук Селин Лангле в 2003 году после трех лет исследований и разработок. 10 лет своей жизни Селин Лангле посвятила фармацевтике, получая вдохновение от природных свойств трав, и испытывая восторг от искусства создания и использования ароматерапии и косметики.</p>
+			<br>
+			</div>
+		</div>
+		<hr>
+		<a id="top3"></a>
+		<div class="u3">
+			<h1>Миссия компании</h1>
+			<div class="tx">
+				<img src="https://sun9-32.userapi.com/c855232/v855232727/1a2d1/xrNZlMYWo0w.jpg" id="ere" height="40%" width="90%" align="center">
+				<p>Миссия компании BIOSEA получила отображение в слогане «le charme au naturel»: «Сохраним и подчеркнем натуральный шарм, заложенный в человеке природой».</p>
+				<p>Ускоренный темп жизни и ухудшение экологии больших городов приводят к росту наблюдаемых проблем кожи, развитию аллергических реакций и различного рода непереносимости обычных косметических средств, в основе возникновения которых лежат синтетические активные ингредиенты.</p>
+				<p>Благодаря откликам клиентов, Селин Лангле чётко осознала требования современных женщин к эффективности и, особенно, к безопасности продукции для себя, своих детей и близких.</p>
+			</div>
+		</div>
+		<hr>
+		<a id="top4"></a>
+		<div class="u4">
+			<h1>Продукция нашей компании</h1>
+			<section class="container" title="Нажмите справа чтобы увидеть следущий объект или нажмите слева чтобы увидеть предыдущий объект">
+				<input type="radio" id="i1" name="images" checked/>
+				<input type="radio" id="i2" name="images" />
+				<input type="radio" id="i3" name="images" />
+				<input type="radio" id="i4" name="images"  />
+				<input type="radio" id="i5" name="images"  />
+				<input type="radio" id="i6" name="images"  />
+				<figure class="slide_img" id="one">			
+						<img src="./Wampun.jpg">
+						<label class="prev" for="i6" title="Нажмите слева чтобы увидеть предыдущий объект"><span></span></label>
+						<label class="next" for="i2" title="Нажмите справа чтобы увидеть следущий объект"><span></span></label>	
+						<nav>Шампунь для волос</nav>
+				</figure>
+				<figure class="slide_img" id="two">
+					<img src="./WampunMuj.jpg" >
+					<label class="prev" for="i1" title="Нажмите слева чтобы увидеть предыдущий объект"><span></span></label>
+					<label class="next" for="i3" title="Нажмите справа чтобы увидеть следущий объект"><span></span></label>
+					<nav>Шампунь для мужчин</nav>
+				</figure>
+				<figure class="slide_img" id="three">
+					<img src="WampunDet.jpg">	
+					<label class="prev" for="i2" title="Нажмите слева чтобы увидеть предыдущий объект"><span></span></label>
+					<label class="next" for="i4" title="Нажмите справа чтобы увидеть следущий объект"><span></span></label>
+					<nav>Шампунь для детей</nav>
+				</figure>
+				<figure class="slide_img" id="four">
+					<img src="MoiweeSr.jpg">	
+					<label class="prev" for="i3" title="Нажмите слева чтобы увидеть предыдущий объект"><span></span></label>
+					<label class="next" for="i5" title="Нажмите справа чтобы увидеть следущий объект"><span></span></label>
+					<nav>Моющее средство</nav>
+				</figure>
+				<figure class="slide_img" id="five">
+					<img src="SolntseJaw.jpg">	
+					<label class="prev" for="i4" title="Нажмите слева чтобы увидеть предыдущий объект"><span></span></label>
+					<label class="next" for="i6" title="Нажмите справа чтобы увидеть следущий объект"><span></span></label>
+					<nav>Солнцезащитный крем</nav>
+				</figure>
+				<figure class="slide_img" id="six">
+					<img src="PenaDliaBrit'.jpg">	
+					<label class="prev" for="i5" title="Нажмите слева чтобы увидеть предыдущий объект"><span></span></label>
+					<label class="next" for="i1" title="Нажмите справа чтобы увидеть следущий объект"><span></span></label>
+					<nav>Пена для бритья</nav>
+				</figure>
+				<figure id="nav_slide">
+					<label for="i1" class="dots" id="dot1"></label>
+					<label for="i2" class="dots" id="dot2"></label>
+					<label for="i3" class="dots" id="dot3"></label>
+					<label for="i4" class="dots" id="dot4"></label>
+					<label for="i5" class="dots" id="dot5"></label>
+					<label for="i6" class="dots" id="dot6"></label>
+				</figure>
+			</section>
+		</div>
+	</main>
+	<footer>
+		
+	</footer>
+</body>
+</html>
