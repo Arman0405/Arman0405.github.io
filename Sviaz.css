@@ -1,0 +1,65 @@
+head, body {
+	background: #fff;
+	margin: 0;
+}
+
+@font-face {
+	font-family: NewC;
+	src: url(./NewC.ttf);
+}
+@font-face {
+	font-family: OhY;
+	src: url(./OhY.ttf);
+}
+@font-face {
+	font-family: Ulala;
+	src: url(./Ulala.ttf);
+}
+header {
+	border-bottom: 1px solid black;
+	margin: 0;
+	padding: 0;
+	max-width: 100%;
+}
+header ul li {
+	list-style: none;
+	font-size: 20px;
+	display: block;
+}
+header ul {
+	display: flex;
+	padding: 0;
+	margin: 0;
+}
+header ul li a {
+	text-decoration: none;
+	color: black;
+	padding: 1em;
+    display: block;
+}
+.lq a {
+	border-right: 1px solid #000;
+}
+#sel {
+	background: grey;
+}
+header ul a:hover {
+	background:lightgrey;
+}
+
+main {
+	margin: 0 16%;
+}
+main div {
+	padding-bottom: 20px;
+}
+
+main h1 {
+	font-family: NewC;
+	font-size: 320%;
+}
+
+main .tx {
+	font-family : OhY;
+	font-size: 22px;
+}
